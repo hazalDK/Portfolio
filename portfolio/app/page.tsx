@@ -8,6 +8,8 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import About from "./components/about";
+import Skills from "./components/skills";
+import Projects from "./components/projects";
 
 const navigation = [
   { name: "Resume", href: "#about", current: true },
@@ -94,6 +96,8 @@ export default function Home() {
         </DisclosurePanel>
       </Disclosure>
       <About />
+      <Skills />
+      <Projects />
     </div>
   );
 }
