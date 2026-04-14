@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import { projects } from "../types/types";
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<projects>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {

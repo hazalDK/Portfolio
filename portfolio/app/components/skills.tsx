@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import { skills } from "../types/types";
 
 export default function Skills() {
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState<skills>([]);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -20,10 +21,9 @@ export default function Skills() {
           <p className="text-4xl font-extrabold mb-2 text-black">Skills!</p>
           {/* Text Content */}
           <div className="text-black text-center md:text-left md:ml-6">
-            <p className="text-lg md:text-xl mb-4">-</p>
             <ul>
               {skills.map((skill) => (
-                <li key={skill.name}>{skill.name}</li>
+                <li key={skill.name}>- {skill.name}</li>
               ))}
             </ul>
           </div>
